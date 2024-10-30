@@ -30,4 +30,21 @@ def obtener_terremotos(formato, fecha_inicio, fecha_fin, magnitud_minima):
         print(f"Error de conexión: {error}")
         return None
 
+# Definir parámetros
+formato_deseado = "geojson"
+fecha_inicio_consulta = "2023-10-01"
+fecha_fin_consulta = "2023-11-28"
+magnitud_minima = 3
 
+# Obtencion de datos
+datos_terremotos = obtener_terremotos(formato_deseado, fecha_inicio_consulta, fecha_fin_consulta, magnitud_minima)
+
+# Proceso y muestra de resultados
+if datos_terremotos:
+    print(f"Se encontraron {len(datos_terremotos['features'])} terremotos en el periodo indicado:")
+    for terremoto in datos_terremotos['features']:
+        lugar = terremoto['properties']['place']
+        magnitud = terremoto['properties']['mag']
+        print(f"Lugar: {lugar}, Magnitud: {magnitud}")
+else:
+    print("No se encontraron resultados o ocurrió un error.")
