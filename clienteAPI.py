@@ -30,6 +30,7 @@ def obtener_terremotos(formato, fecha_inicio, fecha_fin, magnitud_minima):
         print(f"Error de conexión: {error}")
         return None
 
+
 # Definir los parámetros de consulta
 formato_deseado = "geojson"
 fecha_inicio_consulta = "2023-01-01"
