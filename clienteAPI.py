@@ -1,3 +1,10 @@
+######################################################################
+### Monjaraz Perez Sara Alexandra ## Instituto Tecnológico de León ###
+######################################################################
+### API Cliente Terremotos ### Laboratorio Para El Despliegue de   ###
+###                        ###    Aplicaciones Empresariales       ###
+######################################################################
+
 import requests
 
 # URL base de la API
